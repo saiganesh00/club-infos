@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Club Details Form</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" >
+</head>
+<body>
+  <div class="container">
+    <div class="preview-card">
+      <div class="preview-header">
+        <div class="logo-container">
+          <img src = "{% static 'logos/layam.webp' %}" alt="Layam Logo" class="club-logo">
+          <span class="club-type2">Music Club</span>
+        </div>
+      </div>
+      
+      <div class="preview-body">
+        <div class="preview-section">
+          <div class="details-table">
+            <div class="detail-item">
+              <span style="display: block;">
+                <p style="line-height: 1.5; word-spacing: 2px; text-align: justify; margin: 0; padding: 10px 0;">
+                  Welcome to Layam, the Music Club of SIAS. We're all about celebrating music in all its forms, with two main wings — the Western Subcommittee and the Indian Subcommittee. Whether you're into rock, jazz, classical, or Indian ragas, we've got a place for you. Our year is packed with concerts, open mics, jam sessions, and competitions, giving everyone a chance to shine. Layam unites vocalists and instrumentalists who share a passion for music, creating a supportive environment for all levels of musicianship.
+                </p>
+              </span>
+              <span class="label">Email:</span>
+              <span><a href="mailto:all.commsteam@krea.edu.in">all.commsteam@krea.edu.in</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('participationForm');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const participation = formData.get('participation');
+        console.log('Participation:', participation);
+      });
+    });
+  </script>
+</body>
+</html>

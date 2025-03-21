@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Club Details Form</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" >
+</head>
+<body>
+  <div class="container">
+    <div class="preview-card">
+      <div class="preview-header">
+        <div class="logo-container">
+          <img src = "{% static 'logos/sports.webp' %}" alt="Sports Club Logo" class="club-logo">
+          <span class="club-type2">Sports Club</span>
+        </div>
+      </div>
+      
+      <div class="preview-body">
+        <div class="preview-section">
+          <div class="details-table">
+            <div class="detail-item">
+              <span style="display: block;">
+                <p>
+                  To provide a fun, safe, and inclusive sporting environment that encourages students, staff, and faculty to reach their full potential and engage with health and exercise in a meaningful way. Through our strong community, we promote and foster individual and team excellence and develop lifelong bonds through sportsmanship and healthy competition. To be welcoming to all ages, abilities and backgrounds.
+                </p>
+              </span>
+              <span class="label">Email:</span>
+              <span><a href="mailto:all.commsteam@krea.edu.in">all.commsteam@krea.edu.in</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('participationForm');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const participation = formData.get('participation');
+        console.log('Participation:', participation);
+      });
+    });
+  </script>
+</body>
+</html>
